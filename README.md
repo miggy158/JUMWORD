@@ -1,5 +1,7 @@
 # JUMWORD
 
+![JUMWORD MAIN BG](main_bg.png)
+
 **JUMWORD** is a Java Swing word-unscrambling game set in the Philippines. Each round shows a set of jumbled letter tiles and a clue; type the correct city or province before the timer runs out. Questions are grouped into three regional difficulty tiers: **Luzon**, **Visayas**, and **Mindanao**.
 
 The game is built with plain Java and Swing. It has no external dependencies or build-tool requirements.
