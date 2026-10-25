@@ -180,7 +180,7 @@ public class PlayerScreen extends JFrame {
         backBtn.addActionListener(e -> {
             SoundManager.playButton();
             dispose();
-            new Main();
+            new main();
         });
 
         root.add(card);

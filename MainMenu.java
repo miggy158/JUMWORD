@@ -145,7 +145,7 @@ public class MainMenu extends JFrame {
         backBtn.addActionListener(e -> {
             SoundManager.playButton();
             dispose();
-            new Main();
+            new main();
         });
         sheet.add(backBtn);
 

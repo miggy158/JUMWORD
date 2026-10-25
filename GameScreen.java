@@ -759,7 +759,7 @@ public class GameScreen extends JPanel implements ActionListener {
             if (gameTimer != null) gameTimer.stop();
             SoundManager.stopBGMusic();
             frame.dispose();
-            new Main();
+            new main();
         });
         card.add(exitBtn);
 
@@ -1056,7 +1056,7 @@ public class GameScreen extends JPanel implements ActionListener {
     private void showEndOverlay(boolean won) {
         JFrame frame = hostFrame != null ? hostFrame : (JFrame) SwingUtilities.getWindowAncestor(this);
         if (frame == null) {
-            new Main();
+            new main();
             return;
         }
 
@@ -1141,7 +1141,7 @@ public class GameScreen extends JPanel implements ActionListener {
         okBtn.addActionListener(ev -> {
             UIFactory.removeOverlay(backdrop);
             frame.dispose();
-            new Main();
+            new main();
         });
     }
 
@@ -1488,6 +1488,6 @@ public class GameScreen extends JPanel implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        SwingUtilities.invokeLater(main::new);
     }
 }

@@ -15,7 +15,7 @@ import java.util.List;
  *   - setDefaultCloseOperation → DISPOSE_ON_CLOSE
  *   - makeFootBtn uses UIFactory buttons for consistent hover/style
  *   - Confirm dialog uses UIFactory.showOverlay / removeOverlay
- *   - Back routes to Main (not new main())
+ *   - Back routes to main (the entry screen)
  */
 public class LeaderboardScreen extends JFrame {
 
@@ -134,7 +134,7 @@ public class LeaderboardScreen extends JFrame {
         JButton clearBtn = UIFactory.redButton("🗑  CLEAR SCORES");
         clearBtn.setPreferredSize(new Dimension(180, 44));
 
-        backBtn.addActionListener(e -> { new Main(); dispose(); });
+        backBtn.addActionListener(e -> { new main(); dispose(); });
         clearBtn.addActionListener(e -> showStyledConfirm());
 
         footer.add(backBtn);

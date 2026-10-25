@@ -3,19 +3,19 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * Main — application entry point and main-menu screen.
+ * main — application entry point and main-menu screen.
  *
  * FIXES vs original (main.java):
- *   - Class name capitalised (Java convention)
+ *   - Class name matches the main.java file
  *   - Assets loaded via AppConstants.loadImage() → JAR-safe
  *   - Instruction overlay component listener is always removed on close
  *   - setDefaultCloseOperation changed to EXIT_ON_CLOSE only on this root frame
  *   - Sound-toggle button no longer uses reflection hack in UIFactory
  *   - Removed duplicate new BorderLayout() call on root
  */
-public class Main extends JFrame {
+public class main extends JFrame {
 
-    public Main() {
+    public main() {
         setTitle("JUMWORD");
         setSize(AppConstants.WIN_W, AppConstants.WIN_H);
         setLocationRelativeTo(null);
@@ -249,6 +249,6 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        SwingUtilities.invokeLater(main::new);
     }
 }

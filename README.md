@@ -144,7 +144,7 @@ From the project root:
 
 ```bash
 javac -encoding UTF-8 *.java
-java Main
+java main
 ```
 
 Run the game from the project root so that the `assets/` and `sounds/` folders can be found. The save files are also written to the current working directory.
@@ -154,7 +154,7 @@ Run the game from the project root so that the `assets/` and `sounds/` folders c
 > ```bat
 > dir /b *.java > sources.txt
 > javac -encoding UTF-8 @sources.txt
-> java Main
+> java main
 > ```
 
 ### Build a Runnable JAR (Optional)
@@ -164,7 +164,7 @@ mkdir build
 javac -encoding UTF-8 -d build *.java
 cp -r assets build/
 cp -r sounds build/
-jar cfe JUMWORD.jar Main -C build .
+jar cfe JUMWORD.jar main -C build .
 java -jar JUMWORD.jar
 ```
 
@@ -176,7 +176,7 @@ The JAR helpers (`jar -C`) and resource loading are compatible with Java 8. Run 
 
 | Path | Purpose |
 | --- | --- |
-| `Main.java` | Application entry point and main menu (Start, Leaderboard, sound toggle, How to Play overlay) |
+| `main.java` | Application entry point and main menu (Start, Leaderboard, sound toggle, How to Play overlay) |
 | `PlayerScreen.java` | Player-name entry; remembers the last-used name |
 | `MainMenu.java` | Difficulty selection with unlock indicators and progress bars |
 | `GameScreen.java` | Core gameplay: timer, hearts, answer checking, tile rendering, pause menu, and end screen |
@@ -263,7 +263,7 @@ When adding or removing questions, update the matching total in `ProgressTracker
 
 ### `[Assets] Not found: ...`
 
-The game was probably started outside the project root. Run `java Main` from the directory containing `assets/` and `sounds/`, or package both folders into the JAR as shown above.
+The game was probably started outside the project root. Run `java main` from the directory containing `assets/` and `sounds/`, or package both folders into the JAR as shown above.
 
 ### `[SoundManager] Could not load: ...`
 
